@@ -1,14 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine;
 
-
-
-public class GameController : MonoBehaviour
-
+public class MainMenu_Manager : MonoBehaviour
 {
     [SerializeField] public Button startGame;
     [SerializeField] public Button optionsMenu;
