@@ -36,7 +36,7 @@ public class PickUpSystem : MonoBehaviour
     {
         if (heldObject != null)
         {
-            // Calculamos el punto delante de la cámara EN FIXEDUPDATE
+            // Calculamos el punto delante de la cï¿½mara EN FIXEDUPDATE
             targetHoldPosition = Camera.main.transform.position + Camera.main.transform.forward * holdDistance;
 
             MoveObjectSmooth();
@@ -65,8 +65,8 @@ public class PickUpSystem : MonoBehaviour
 
                     // Ajustes de estabilidad
                     heldObject.useGravity = false;
-                    heldObject.drag = 10f;
-                    heldObject.angularDrag = 10f;
+                    heldObject.linearDamping = 10f;
+                    heldObject.angularDamping = 10f;
                     heldObject.constraints = RigidbodyConstraints.FreezeRotation;
                 }
             }
@@ -90,8 +90,8 @@ public class PickUpSystem : MonoBehaviour
             Physics.IgnoreCollision(playerCollider, heldCollider, false);
 
         heldObject.useGravity = true;
-        heldObject.drag = 1f;
-        heldObject.angularDrag = 0.05f;
+        heldObject.linearDamping = 1f;
+        heldObject.angularDamping = 0.05f;
         heldObject.constraints = RigidbodyConstraints.None;
 
         heldObject = null;
