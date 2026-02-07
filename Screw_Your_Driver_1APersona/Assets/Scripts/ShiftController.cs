@@ -26,7 +26,7 @@ public class ShiftController : MonoBehaviour
     void Update()
     {
         UIShiftChange();
-        closeShiftOverview.onClick.AddListener(HideShiftOverview); //esto no anda bien
+        //closeShiftOverview.onClick.AddListener(HideShiftOverview); //esto no anda bien
 
     }
 
@@ -45,7 +45,7 @@ public class ShiftController : MonoBehaviour
         else
         {
             uiShiftIndicator.text = "Shop Closed";
-            canvasShiftOverview.SetActive(true);//esto tengo que revisarlo para que la primera vez no salga e incluirle un objeto, una imagen, que al ahcer click en ella vuelva a ocultarse.
+            //canvasShiftOverview.SetActive(true);//esto tengo que revisarlo para que la primera vez no salga e incluirle un objeto, una imagen, que al ahcer click en ella vuelva a ocultarse.
         }
     }
 
