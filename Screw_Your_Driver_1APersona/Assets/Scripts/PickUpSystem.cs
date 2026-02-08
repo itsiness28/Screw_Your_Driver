@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUpSystem : MonoBehaviour
@@ -10,11 +8,14 @@ public class PickUpSystem : MonoBehaviour
     public float holdDistance = 1.5f;
     public KeyCode pickUpKey = KeyCode.E;
 
+    [Header("Referencias")]
+    public Inventory inventory; // Inventario del jugador
+
     private Rigidbody heldObject;
     private Collider heldCollider;
     private Collider playerCollider;
 
-    private Vector3 targetHoldPosition; // Punto virtual calculado
+    private Vector3 targetHoldPosition;
 
     void Start()
     {
@@ -25,10 +26,15 @@ public class PickUpSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(pickUpKey))
         {
-            if (heldObject == null)
-                TryPickUp();
-            else
+            // Si ya estamos sosteniendo un objeto → soltarlo
+            if (heldObject != null)
+            {
                 DropObject();
+                return;
+            }
+
+            // Si no sostenemos nada → intentar recoger
+            TryPickUp();
         }
     }
 
@@ -36,8 +42,9 @@ public class PickUpSystem : MonoBehaviour
     {
         if (heldObject != null)
         {
-            // Calculamos el punto delante de la c�mara EN FIXEDUPDATE
-            targetHoldPosition = Camera.main.transform.position + Camera.main.transform.forward * holdDistance;
+            // Punto delante de la cámara calculado en física
+            targetHoldPosition = Camera.main.transform.position +
+                                 Camera.main.transform.forward * holdDistance;
 
             MoveObjectSmooth();
         }
@@ -50,25 +57,54 @@ public class PickUpSystem : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, pickUpRange))
         {
-            if (hit.collider.CompareTag("PickUp"))
+            if (!hit.collider.CompareTag("PickUp"))
+                return;
+
+            Item item = hit.collider.GetComponent<Item>();
+
+            if (item == null)
+                return;
+
+            // -------------------------------
+            // 1) OBJETOS DE INVENTARIO
+            // -------------------------------
+            if (item.type == ItemType.ToolA ||
+                item.type == ItemType.ToolB ||
+                item.type == ItemType.Nails)
             {
-                Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+                bool added = inventory.AddItem(item);
 
-                if (rb != null)
+                if (added)
                 {
-                    heldObject = rb;
-                    heldCollider = rb.GetComponent<Collider>();
-
-                    // Ignorar colisiones con el jugador
-                    if (playerCollider != null && heldCollider != null)
-                        Physics.IgnoreCollision(playerCollider, heldCollider, true);
-
-                    // Ajustes de estabilidad
-                    heldObject.useGravity = false;
-                    heldObject.linearDamping = 10f;
-                    heldObject.angularDamping = 10f;
-                    heldObject.constraints = RigidbodyConstraints.FreezeRotation;
+                    Destroy(item.gameObject);
                 }
+                else
+                {
+                    Debug.Log("Inventario lleno o no se puede añadir este objeto.");
+                }
+
+                return;
+            }
+
+            // -------------------------------
+            // 2) OBJETOS SOSTENIBLES EN EL AIRE
+            // -------------------------------
+            Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                heldObject = rb;
+                heldCollider = rb.GetComponent<Collider>();
+
+                // Ignorar colisiones con el jugador
+                if (playerCollider != null && heldCollider != null)
+                    Physics.IgnoreCollision(playerCollider, heldCollider, true);
+
+                // Ajustes de estabilidad
+                heldObject.useGravity = false;
+                heldObject.linearDamping = 10f;
+                heldObject.angularDamping = 10f;
+                heldObject.constraints = RigidbodyConstraints.FreezeRotation;
             }
         }
     }
