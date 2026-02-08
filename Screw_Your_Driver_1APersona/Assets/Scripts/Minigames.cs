@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Minigames : MonoBehaviour
 {
@@ -65,6 +66,9 @@ public class Minigames : MonoBehaviour
             ScrewsCountText.text = ("Congrats!");
             ClickCountText.text = ("You built a chair.");
             chairBuilt = true;
+
+            SceneManager.LoadScene("Main_Game");
         }
+
     }
 }
