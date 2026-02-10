@@ -10626,6 +10626,7 @@ GameObject:
   - component: {fileID: 1540228380}
   - component: {fileID: 1540228385}
   - component: {fileID: 1540228379}
+  - component: {fileID: 1540228386}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -10673,7 +10674,7 @@ MonoBehaviour:
   speed: 6
   sprintSpeed: 10
   gravity: -9.81
-  mouseSensitivity: 240
+  mouseSensitivity: 495.2
   cameraTransform: {fileID: 204257959}
 --- !u!136 &1540228381
 CapsuleCollider:
@@ -10783,7 +10784,23 @@ MonoBehaviour:
   moveSpeed: 20
   holdDistance: 1.5
   pickUpKey: 101
-  inventory: {fileID: 0}
+  inventory: {fileID: 1540228386}
+--- !u!114 &1540228386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540228378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c08506798dceb4f92d5fd5025b39f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toolSlot: 1
+  toolAmount: 0
+  nailsAmount: 0
+  maxNails: 8
 --- !u!1 &1558438700
 GameObject:
   m_ObjectHideFlags: 0

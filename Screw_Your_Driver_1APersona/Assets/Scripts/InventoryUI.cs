@@ -1,12 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
     public Inventory inventory;
 
-    public Text slot1Text;
-    public Text slot2Text;
+    public Text toolSlotText;   // Slot 1 → Herramientas
+    public Text nailsSlotText;  // Slot 2 → Clavos
 
     void Start()
     {
@@ -16,18 +16,13 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateUI()
     {
-        slot1Text.text = FormatSlot(inventory.slot1Type, inventory.slot1Amount);
-        slot2Text.text = FormatSlot(inventory.slot2Type, inventory.slot2Amount);
-    }
+        // SLOT 1 → HERRAMIENTAS
+        if (inventory.toolSlot == ItemType.None)
+            toolSlotText.text = "[Herramienta: Vacío]";
+        else
+            toolSlotText.text = "Herramienta: " + inventory.toolSlot.ToString();
 
-    string FormatSlot(ItemType type, int amount)
-    {
-        if (type == ItemType.None)
-            return "[Vac�o]";
-
-        if (type == ItemType.Nails)
-            return "Clavos: " + amount;
-
-        return type.ToString();
+        // SLOT 2 → CLAVOS
+        nailsSlotText.text = "Clavos: " + inventory.nailsAmount + " / " + inventory.maxNails;
     }
 }
