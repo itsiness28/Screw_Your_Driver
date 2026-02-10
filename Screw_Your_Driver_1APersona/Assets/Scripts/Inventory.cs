@@ -1,7 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    [Header("Prefabs de herramientas en el mundo")]
+    public GameObject toolAWorldPrefab;
+    public GameObject toolBWorldPrefab;
+
+    [Header("Referencia al jugador")]
+    public Transform playerTransform;
+
+
     [Header("Slot 1 (Herramientas)")]
     public ItemType toolSlot = ItemType.None;   // ToolA o ToolB
     public int toolAmount = 0;                  // Siempre 1
@@ -56,6 +65,8 @@ public class Inventory : MonoBehaviour
 
             Destroy(item.gameObject);
             inventoryChanged?.Invoke();
+            Console.WriteLine("Herramienta cogida");
+            Debug.Log("cogido");
             return true;
         }
 
@@ -64,13 +75,41 @@ public class Inventory : MonoBehaviour
     }
 
     // Soltar herramienta del slot 1
-    void DropTool()
+    public void DropTool()
     {
-        // Aquí debes instanciar el prefab de la herramienta en el suelo
-        // Ejemplo:
-        // Instantiate(prefabToolA, transform.position + transform.forward, Quaternion.identity);
+        if (toolSlot == ItemType.None)
+            return;
 
+        GameObject prefabToDrop = null;
+
+        // Elegir el prefab correcto
+        if (toolSlot == ItemType.ToolA)
+            prefabToDrop = toolAWorldPrefab;
+        else if (toolSlot == ItemType.ToolB)
+            prefabToDrop = toolBWorldPrefab;
+
+        if (prefabToDrop != null)
+        {
+            // Instanciar delante del jugador
+            Vector3 dropPos = playerTransform.position + playerTransform.forward * 1f;
+            Quaternion dropRot = Quaternion.identity;
+
+            GameObject dropped = GameObject.Instantiate(prefabToDrop, dropPos, dropRot);
+
+            // Asegurar que tiene Item configurado
+            Item item = dropped.GetComponent<Item>();
+            if (item == null)
+                item = dropped.AddComponent<Item>();
+
+            item.type = toolSlot;
+            item.amount = 1;
+        }
+
+        // Vaciar el slot
         toolSlot = ItemType.None;
         toolAmount = 0;
+
+        inventoryChanged?.Invoke();
     }
+
 }

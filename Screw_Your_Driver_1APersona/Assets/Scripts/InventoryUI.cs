@@ -5,8 +5,15 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory inventory;
 
-    public Text toolSlotText;   // Slot 1 → Herramientas
-    public Text nailsSlotText;  // Slot 2 → Clavos
+    [Header("Slot de herramienta")]
+    public RawImage toolIcon;
+    public Texture toolAIcon;
+    public Texture toolBIcon;
+
+    [Header("Slot de clavos")]
+    public RawImage nailsIcon;
+    public Text nailsCountText;
+    public Texture nailsTexture;
 
     void Start()
     {
@@ -16,13 +23,26 @@ public class InventoryUI : MonoBehaviour
 
     void UpdateUI()
     {
-        // SLOT 1 → HERRAMIENTAS
-        if (inventory.toolSlot == ItemType.None)
-            toolSlotText.text = "[Herramienta: Vacío]";
-        else
-            toolSlotText.text = "Herramienta: " + inventory.toolSlot.ToString();
+        // SLOT 1 → HERRAMIENTA (solo icono)
+        switch (inventory.toolSlot)
+        {
+            case ItemType.ToolA:
+                toolIcon.texture = toolAIcon;
+                toolIcon.enabled = true;
+                break;
 
-        // SLOT 2 → CLAVOS
-        nailsSlotText.text = "Clavos: " + inventory.nailsAmount + " / " + inventory.maxNails;
+            case ItemType.ToolB:
+                toolIcon.texture = toolBIcon;
+                toolIcon.enabled = true;
+                break;
+
+            default:
+                toolIcon.enabled = false; // Ocultar si no hay herramienta
+                break;
+        }
+
+        // SLOT 2 → CLAVOS (icono + número)
+        nailsIcon.texture = nailsTexture;
+        nailsCountText.text = inventory.nailsAmount.ToString();
     }
 }
