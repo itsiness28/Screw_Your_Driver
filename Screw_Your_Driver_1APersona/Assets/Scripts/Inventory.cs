@@ -2,137 +2,75 @@
 
 public class Inventory : MonoBehaviour
 {
-    public ItemType slot1Type = ItemType.None;
-    public int slot1Amount = 0;
+    [Header("Slot 1 (Herramientas)")]
+    public ItemType toolSlot = ItemType.None;   // ToolA o ToolB
+    public int toolAmount = 0;                  // Siempre 1
 
-    public ItemType slot2Type = ItemType.None;
-    public int slot2Amount = 0;
-
+    [Header("Slot 2 (Clavos)")]
+    public int nailsAmount = 0;                 // 0–8
     public int maxNails = 8;
 
     public delegate void OnInventoryChanged();
     public event OnInventoryChanged inventoryChanged;
 
+    // Añadir objeto al inventario
     public bool AddItem(Item item)
     {
-        // --- CLAVOS (acumulables) ---
+        // -------------------------------
+        // 1) CLAVOS → Slot 2
+        // -------------------------------
         if (item.type == ItemType.Nails)
         {
-            // Intentar meter en slot 1
-            if (slot1Type == ItemType.Nails && slot1Amount < maxNails)
-            {
-                int space = maxNails - slot1Amount;
-                int toAdd = Mathf.Min(space, item.amount);
-                slot1Amount += toAdd;
-                item.amount -= toAdd;
+            int space = maxNails - nailsAmount;
 
-                if (item.amount <= 0)
-                {
-                    Destroy(item.gameObject);
-                    inventoryChanged?.Invoke();
-                    return true;
-                }
+            if (space <= 0)
+                return false; // Slot lleno
+
+            int toAdd = Mathf.Min(space, item.amount);
+            nailsAmount += toAdd;
+            item.amount -= toAdd;
+
+            if (item.amount <= 0)
+            {
+                Destroy(item.gameObject);
             }
 
-            // Intentar meter en slot 2
-            if (slot2Type == ItemType.Nails && slot2Amount < maxNails)
-            {
-                int space = maxNails - slot2Amount;
-                int toAdd = Mathf.Min(space, item.amount);
-                slot2Amount += toAdd;
-                item.amount -= toAdd;
-
-                if (item.amount <= 0)
-                {
-                    Destroy(item.gameObject);
-                    inventoryChanged?.Invoke();
-                    return true;
-                }
-            }
-
-            // Si no hay clavos en ningún slot, meter en slot vacío
-            if (slot1Type == ItemType.None)
-            {
-                slot1Type = ItemType.Nails;
-                slot1Amount = Mathf.Min(item.amount, maxNails);
-                item.amount -= slot1Amount;
-
-                if (item.amount <= 0)
-                {
-                    Destroy(item.gameObject);
-                    inventoryChanged?.Invoke();
-                    return true;
-                }
-            }
-
-            if (slot2Type == ItemType.None)
-            {
-                slot2Type = ItemType.Nails;
-                slot2Amount = Mathf.Min(item.amount, maxNails);
-                item.amount -= slot2Amount;
-
-                if (item.amount <= 0)
-                {
-                    Destroy(item.gameObject);
-                    inventoryChanged?.Invoke();
-                    return true;
-                }
-            }
-
-            return false;
+            inventoryChanged?.Invoke();
+            return true;
         }
 
-        // --- HERRAMIENTAS (solo 1 por slot) ---
+        // -------------------------------
+        // 2) HERRAMIENTAS → Slot 1
+        // -------------------------------
         if (item.type == ItemType.ToolA || item.type == ItemType.ToolB)
         {
-            // Slot 1 vacío
-            if (slot1Type == ItemType.None)
+            // Si ya hay una herramienta → soltarla
+            if (toolSlot != ItemType.None)
             {
-                slot1Type = item.type;
-                slot1Amount = 1;
-                Destroy(item.gameObject);
-                inventoryChanged?.Invoke();
-                return true;
+                DropTool();
             }
 
-            // Slot 2 vacío
-            if (slot2Type == ItemType.None)
-            {
-                slot2Type = item.type;
-                slot2Amount = 1;
-                Destroy(item.gameObject);
-                inventoryChanged?.Invoke();
-                return true;
-            }
+            // Guardar la nueva herramienta
+            toolSlot = item.type;
+            toolAmount = 1;
 
-            // Ambos slots ocupados → soltar herramienta del slot 1
-            DropItem(slot1Type);
-            slot1Type = item.type;
-            slot1Amount = 1;
             Destroy(item.gameObject);
             inventoryChanged?.Invoke();
             return true;
         }
 
+        // Si no es ni clavos ni herramienta → no se puede guardar
         return false;
     }
 
-    public void DropItem(ItemType type)
+    // Soltar herramienta del slot 1
+    void DropTool()
     {
-        // Aquí se instancia el prefab de la herramienta en el suelo
+        // Aquí debes instanciar el prefab de la herramienta en el suelo
+        // Ejemplo:
         // Instantiate(prefabToolA, transform.position + transform.forward, Quaternion.identity);
 
-        if (slot1Type == type)
-        {
-            slot1Type = ItemType.None;
-            slot1Amount = 0;
-        }
-        else if (slot2Type == type)
-        {
-            slot2Type = ItemType.None;
-            slot2Amount = 0;
-        }
-
-        inventoryChanged?.Invoke();
+        toolSlot = ItemType.None;
+        toolAmount = 0;
     }
 }
