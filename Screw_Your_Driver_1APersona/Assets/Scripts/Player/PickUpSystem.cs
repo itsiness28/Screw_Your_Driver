@@ -9,7 +9,7 @@ public class PickUpSystem : MonoBehaviour
     public KeyCode pickUpKey = KeyCode.E;
 
     [Header("Referencias")]
-    public Inventory inventory; // Inventario del jugador
+    public Inventory inventory;
 
     private Rigidbody heldObject;
     private Collider heldCollider;
@@ -26,14 +26,12 @@ public class PickUpSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(pickUpKey))
         {
-            // Si ya estamos sosteniendo un objeto → soltarlo
             if (heldObject != null)
             {
                 DropObject();
                 return;
             }
 
-            // Si no sostenemos nada → intentar recoger
             TryPickUp();
         }
     }
@@ -42,7 +40,6 @@ public class PickUpSystem : MonoBehaviour
     {
         if (heldObject != null)
         {
-            // Punto delante de la cámara calculado en física
             targetHoldPosition = Camera.main.transform.position +
                                  Camera.main.transform.forward * holdDistance;
 
@@ -55,59 +52,56 @@ public class PickUpSystem : MonoBehaviour
         Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, pickUpRange))
+        if (!Physics.Raycast(ray, out hit, pickUpRange))
+            return;
+
+        // 1) CUBO RECARGABLE DE CLAVOS
+        NailsRespawnPickup respawnPickup = hit.collider.GetComponent<NailsRespawnPickup>();
+        if (respawnPickup != null)
         {
-            if (!hit.collider.CompareTag("PickUp"))
+            // Solo hace algo si está disponible; si no, seguimos con el resto
+            bool picked = respawnPickup.TryPickup(inventory);
+            if (picked)
                 return;
+        }
 
-            Item item = hit.collider.GetComponent<Item>();
+        // 2) OBJETOS DE INVENTARIO (ToolA, ToolB, Nails)
+        Item item = hit.collider.GetComponent<Item>();
+        if (item != null && hit.collider.CompareTag("PickUp"))
+        {
+            bool added = inventory.AddItem(item);
 
-            if (item == null)
-                return;
-
-            // -------------------------------
-            // 1) OBJETOS DE INVENTARIO
-            // -------------------------------
-            if (item.type == ItemType.ToolA ||
-                item.type == ItemType.ToolB ||
-                item.type == ItemType.Nails)
+            if (added)
             {
-                bool added = inventory.AddItem(item);
-
-                if (added)
-                {
-                    Destroy(item.gameObject);
-                }
-                else
-                {
-                    Debug.Log("Inventario lleno o no se puede añadir este objeto.");
-                }
-
-                return;
+                Destroy(item.gameObject);
+            }
+            else
+            {
+                Debug.Log("Inventario lleno o no se puede añadir este objeto.");
             }
 
-            // -------------------------------
-            // 2) OBJETOS SOSTENIBLES EN EL AIRE
-            // -------------------------------
-            Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+            return;
+        }
 
-            if (rb != null)
-            {
-                heldObject = rb;
-                heldCollider = rb.GetComponent<Collider>();
+        // 3) OBJETOS SOSTENIBLES (Rigidbody)
+        Rigidbody rb = hit.rigidbody; // más fiable que GetComponent en el collider
 
-                // Ignorar colisiones con el jugador
-                if (playerCollider != null && heldCollider != null)
-                    Physics.IgnoreCollision(playerCollider, heldCollider, true);
+        if (rb != null)
+        {
+            heldObject = rb;
+            heldCollider = rb.GetComponent<Collider>();
 
-                // Ajustes de estabilidad
-                heldObject.useGravity = false;
-                heldObject.linearDamping = 10f;
-                heldObject.angularDamping = 10f;
-                heldObject.constraints = RigidbodyConstraints.FreezeRotation;
-            }
+            if (playerCollider != null && heldCollider != null)
+                Physics.IgnoreCollision(playerCollider, heldCollider, true);
+
+            heldObject.useGravity = false;
+            heldObject.linearDamping = 10f;
+            heldObject.angularDamping = 10f;
+            heldObject.constraints = RigidbodyConstraints.FreezeRotation;
         }
     }
+
+
 
     void MoveObjectSmooth()
     {

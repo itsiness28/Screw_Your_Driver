@@ -25,28 +25,7 @@ public class Inventory : MonoBehaviour
     // Añadir objeto al inventario
     public bool AddItem(Item item)
     {
-        // -------------------------------
-        // 1) CLAVOS → Slot 2
-        // -------------------------------
-        if (item.type == ItemType.Nails)
-        {
-            int space = maxNails - nailsAmount;
-
-            if (space <= 0)
-                return false; // Slot lleno
-
-            int toAdd = Mathf.Min(space, item.amount);
-            nailsAmount += toAdd;
-            item.amount -= toAdd;
-
-            if (item.amount <= 0)
-            {
-                Destroy(item.gameObject);
-            }
-
-            inventoryChanged?.Invoke();
-            return true;
-        }
+        
 
         // -------------------------------
         // 2) HERRAMIENTAS → Slot 1
@@ -111,5 +90,15 @@ public class Inventory : MonoBehaviour
 
         inventoryChanged?.Invoke();
     }
+
+    public bool AddNails(int amount)
+    {
+        nailsAmount += amount;
+        if (nailsAmount > 8) 
+            nailsAmount = 8;
+        inventoryChanged?.Invoke();
+        return true;
+    }
+
 
 }
