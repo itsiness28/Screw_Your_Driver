@@ -42,7 +42,7 @@ public class OrderManager : MonoBehaviour
         {
             Debug.Log("Jugador dentro");
 
-            if (Input.GetKeyDown(KeyCode.E) && IsLookingAtObject())
+            if (Input.GetKeyDown(KeyCode.E) /*&& IsLookingAtObject()*/)
             {
                 Debug.Log("E presionada");
                 TrySpawnOrder();
@@ -117,19 +117,19 @@ public class OrderManager : MonoBehaviour
         return nextOrderID++;
     }
 
-    bool IsLookingAtObject()
-    {
-        //Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-        //RaycastHit hit;
+    //bool IsLookingAtObject()
+    //{
+    //    //Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+    //    //RaycastHit hit;
 
-        //if (Physics.Raycast(ray, out hit, 3f))
-        //{
-        //    if (hit.collider == this.GetComponent<Collider>())
-        //    {
-        //        return true;
-        //    }
-        //}
+    //    //if (Physics.Raycast(ray, out hit, 3f))
+    //    //{
+    //    //    if (hit.collider == this.GetComponent<Collider>())
+    //    //    {
+    //    //        return true;
+    //    //    }
+    //    //}
 
-        //return false;
-    }
+    //    //return false;
+    //}
 }
