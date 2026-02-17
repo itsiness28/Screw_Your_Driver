@@ -20,14 +20,33 @@ public class OrderManager : MonoBehaviour
 
     [SerializeField] private OrderInstance orderPrefab;
 
+    //momentanio aqui
+    private Camera playerCamera;
+
     void Update()
     {
         spawnTimer += Time.deltaTime;
 
-        if (spawnTimer >= timeBetweenOrders)
+        //if (spawnTimer >= timeBetweenOrders)
+        //{
+        //    TrySpawnOrder();
+        //    spawnTimer = 0f;
+        //}
+    }
+    //
+    private void OnTriggerStay(Collider other)
+    {
+        Debug.Log("Detectando algo");
+
+        if (other.CompareTag("Player"))
         {
-            TrySpawnOrder();
-            spawnTimer = 0f;
+            Debug.Log("Jugador dentro");
+
+            if (Input.GetKeyDown(KeyCode.E) && IsLookingAtObject())
+            {
+                Debug.Log("E presionada");
+                TrySpawnOrder();
+            }
         }
     }
 
@@ -96,5 +115,21 @@ public class OrderManager : MonoBehaviour
     int GenerateOrderID()
     {
         return nextOrderID++;
+    }
+
+    bool IsLookingAtObject()
+    {
+        //Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
+        //RaycastHit hit;
+
+        //if (Physics.Raycast(ray, out hit, 3f))
+        //{
+        //    if (hit.collider == this.GetComponent<Collider>())
+        //    {
+        //        return true;
+        //    }
+        //}
+
+        //return false;
     }
 }
