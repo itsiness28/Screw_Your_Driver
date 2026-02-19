@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 5477853257168795479}
   - component: {fileID: 7729185236827152893}
   - component: {fileID: 8742161774281169954}
-  - component: {fileID: 2457646234047567053}
+  - component: {fileID: 7464896386376576417}
   - component: {fileID: 666552303456602220}
-  m_Layer: 0
+  - component: {fileID: 3193726219685788289}
+  m_Layer: 3
   m_Name: Destornillador
   m_TagString: PickUp
   m_Icon: {fileID: 0}
@@ -110,7 +111,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.376368, y: 0.45299733, z: 0.40278625}
   m_Center: {x: -0.16658854, y: 0.005441159, z: 0.003112793}
---- !u!114 &2457646234047567053
+--- !u!114 &7464896386376576417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,7 +120,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 422156563357431675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c290a4ba1003f840b7882a8ace68c0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cb8470515ef1814d9ee71687da762a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
@@ -151,3 +152,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3193726219685788289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 422156563357431675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb63c6b1bee1bb429f23ac5eb93023f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}

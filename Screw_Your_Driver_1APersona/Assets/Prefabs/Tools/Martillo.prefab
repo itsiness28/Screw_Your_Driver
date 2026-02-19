@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4907529964428389767}
   - component: {fileID: 375992321778829}
   - component: {fileID: 1487390852232231903}
-  - component: {fileID: 8634525710301617753}
+  - component: {fileID: 3332949016461186003}
   - component: {fileID: -8317779735067341767}
-  m_Layer: 0
+  - component: {fileID: 9050247656132037823}
+  m_Layer: 3
   m_Name: Martillo
   m_TagString: PickUp
   m_Icon: {fileID: 0}
@@ -108,9 +109,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.3238443, y: 0.4044273, z: 1}
-  m_Center: {x: 0.66861576, y: 0.020466328, z: 0}
---- !u!114 &8634525710301617753
+  m_Size: {x: 1.3238443, y: 0.371473, z: 1}
+  m_Center: {x: 0.66861576, y: 0.036943473, z: 0}
+--- !u!114 &3332949016461186003
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,10 +120,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1670674415666495146}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c290a4ba1003f840b7882a8ace68c0e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cb8470515ef1814d9ee71687da762a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 2
+  type: 1
   amount: 1
 --- !u!54 &-8317779735067341767
 Rigidbody:
@@ -151,3 +152,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &9050247656132037823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670674415666495146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afb63c6b1bee1bb429f23ac5eb93023f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}

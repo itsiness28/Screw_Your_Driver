@@ -2002,37 +2002,15 @@ GameObject:
   - component: {fileID: 283498926}
   - component: {fileID: 283498925}
   - component: {fileID: 283498924}
-  - component: {fileID: 283498923}
-  - component: {fileID: 283498927}
   - component: {fileID: 283498928}
-  m_Layer: 0
+  - component: {fileID: 283498927}
+  m_Layer: 3
   m_Name: OrderButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &283498923
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 283498922}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.5, y: 2.5, z: 2.5}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &283498924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2114,7 +2092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bdd85b281509f64c84f94de487bc6d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxActiveOrders: 3
+  maxActiveOrders: 1
   timeBetweenOrders: 5
   availableRecipes:
   - {fileID: 11400000, guid: 300dfa614db97b64dadfb2eb07b5887d, type: 2}
@@ -2138,7 +2116,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -9247,25 +9225,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1487390852232231903, guid: 6047f990928d5b64f9c086119777c1ca,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.371473
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487390852232231903, guid: 6047f990928d5b64f9c086119777c1ca,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 0.036943473
-      objectReference: {fileID: 0}
     - target: {fileID: 1670674415666495146, guid: 6047f990928d5b64f9c086119777c1ca,
         type: 3}
       propertyPath: m_Name
       value: Martillo
-      objectReference: {fileID: 0}
-    - target: {fileID: 8634525710301617753, guid: 6047f990928d5b64f9c086119777c1ca,
-        type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11556,9 +11519,10 @@ GameObject:
   - component: {fileID: 1540228382}
   - component: {fileID: 1540228381}
   - component: {fileID: 1540228380}
-  - component: {fileID: 1540228385}
   - component: {fileID: 1540228379}
   - component: {fileID: 1540228386}
+  - component: {fileID: 1540228387}
+  - component: {fileID: 1540228388}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -11700,23 +11664,6 @@ Transform:
   - {fileID: 204257959}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1540228385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540228378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb0aa1e6826f1f541869fc3336d67e74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpRange: 5
-  moveSpeed: 20
-  holdDistance: 1.5
-  pickUpKey: 101
-  inventory: {fileID: 1540228386}
 --- !u!114 &1540228386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11738,6 +11685,41 @@ MonoBehaviour:
   toolAmount: 0
   nailsAmount: 0
   maxNails: 8
+--- !u!114 &1540228387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540228378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3bc549ff6399034586132f8fb0ae07f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactUpRange: 2
+  pickUpKey: 101
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  inventory: {fileID: 0}
+--- !u!114 &1540228388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540228378}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb0aa1e6826f1f541869fc3336d67e74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickUpRange: 3
+  moveSpeed: 20
+  holdDistance: 1.5
+  pickUpKey: 101
+  inventory: {fileID: 0}
 --- !u!1 &1558438700
 GameObject:
   m_ObjectHideFlags: 0
@@ -13166,6 +13148,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CajaClavos
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850775100399003102, guid: 4407bdebc6101e848a1695ad87cf7bcc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914676190930830166, guid: 4407bdebc6101e848a1695ad87cf7bcc,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914676190930830166, guid: 4407bdebc6101e848a1695ad87cf7bcc,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8914676190930830166, guid: 4407bdebc6101e848a1695ad87cf7bcc,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

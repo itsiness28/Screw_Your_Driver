@@ -3,7 +3,7 @@ using UnityEngine;
 
 // Manages the lifecycle of orders: spawning, tracking active orders,
 // and removing them when completed or failed
-public class OrderManager : MonoBehaviour
+public class OrderManager : MonoBehaviour, IInteractable
 {
     [Header("Order Settings")]
     public int maxActiveOrders = 3;
@@ -20,9 +20,6 @@ public class OrderManager : MonoBehaviour
 
     [SerializeField] private OrderInstance orderPrefab;
 
-    //momentanio aqui
-    private Camera playerCamera;
-
     void Update()
     {
         spawnTimer += Time.deltaTime;
@@ -33,27 +30,17 @@ public class OrderManager : MonoBehaviour
         //    spawnTimer = 0f;
         //}
     }
-    //
-    private void OnTriggerStay(Collider other)
+    public void Interact(GameObject interactor)
     {
-        Debug.Log("Detectando algo");
-
-        if (other.CompareTag("Player"))
-        {
-            Debug.Log("Jugador dentro");
-
-            if (Input.GetKeyDown(KeyCode.E) /*&& IsLookingAtObject()*/)
-            {
-                Debug.Log("E presionada");
-                TrySpawnOrder();
-            }
-        }
+        Debug.Log("Entro en interact");
+        TrySpawnOrder();
     }
 
     // Attempts to spawn a new order if the maximum number of active orders
     // has not been reached
     void TrySpawnOrder()
     {
+        Debug.Log("Entro en TrySpawn");
         if (activeOrders.Count >= maxActiveOrders)
             return;
 
