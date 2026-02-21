@@ -19,6 +19,7 @@ public class OrderManager : MonoBehaviour, IInteractable
     private int nextOrderID = 0;
 
     [SerializeField] private OrderInstance orderPrefab;
+    public static event System.Action<OrderInstance> OnOrderCreated;
 
     void Update()
     {
@@ -66,6 +67,8 @@ public class OrderManager : MonoBehaviour, IInteractable
 
         OrderInstance instance = CreateOrderInstance(data);
         activeOrders.Add(instance);
+
+        OnOrderCreated?.Invoke(instance);
     }
 
     // Instantiates and initializes an OrderInstance in the scene
@@ -103,20 +106,4 @@ public class OrderManager : MonoBehaviour, IInteractable
     {
         return nextOrderID++;
     }
-
-    //bool IsLookingAtObject()
-    //{
-    //    //Ray ray = new Ray(playerCamera.transform.position, playerCamera.transform.forward);
-    //    //RaycastHit hit;
-
-    //    //if (Physics.Raycast(ray, out hit, 3f))
-    //    //{
-    //    //    if (hit.collider == this.GetComponent<Collider>())
-    //    //    {
-    //    //        return true;
-    //    //    }
-    //    //}
-
-    //    //return false;
-    //}
 }
