@@ -2146,6 +2146,7 @@ MonoBehaviour:
   availableRecipes:
   - {fileID: 11400000, guid: 300dfa614db97b64dadfb2eb07b5887d, type: 2}
   activeOrders: []
+  orderUIManager: {fileID: 109190542}
   orderPrefab: {fileID: 6271531801771897513, guid: 1cc64e8051ac49e4e87c80b7548ee6ba,
     type: 3}
 --- !u!65 &283498928

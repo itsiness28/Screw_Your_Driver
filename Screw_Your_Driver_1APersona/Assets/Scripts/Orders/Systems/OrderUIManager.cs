@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.ComponentModel;
 
 public class OrderUIManager : MonoBehaviour
 {
@@ -13,13 +14,14 @@ public class OrderUIManager : MonoBehaviour
     private void OnDisable()
     {
         OrderManager.OnOrderCreated -= ShowOrder;
+        orderText.text = "";
     }
 
     private void ShowOrder(OrderInstance instance)
     {
         orderText.text = BuildText(instance);
+        
     }
-
     private string BuildText(OrderInstance instance)
     {
         var data = instance.data;

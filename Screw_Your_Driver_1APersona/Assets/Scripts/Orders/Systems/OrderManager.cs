@@ -15,10 +15,13 @@ public class OrderManager : MonoBehaviour, IInteractable
     [Header("Runtime")]
     public List<OrderInstance> activeOrders = new List<OrderInstance>();
 
-    private float spawnTimer;
-    private int nextOrderID = 0;
-
+    [Header("References")]
+    public OrderUIManager orderUIManager;
     [SerializeField] private OrderInstance orderPrefab;
+
+    private float spawnTimer;
+    private int nextOrderID = 1;
+
     public static event System.Action<OrderInstance> OnOrderCreated;
 
     void Update()
@@ -68,6 +71,7 @@ public class OrderManager : MonoBehaviour, IInteractable
         OrderInstance instance = CreateOrderInstance(data);
         activeOrders.Add(instance);
 
+        orderUIManager.gameObject.SetActive(true);
         OnOrderCreated?.Invoke(instance);
     }
 
@@ -84,6 +88,7 @@ public class OrderManager : MonoBehaviour, IInteractable
     {
         Debug.Log($"[OrderManager] Order {instance.data.orderID} removed");
 
+        orderUIManager.gameObject.SetActive(false);
         activeOrders.Remove(instance);
         Destroy(instance.gameObject);
     }
