@@ -9,14 +9,9 @@ public class InteractSystem : MonoBehaviour
 
     [Header("Referencias")]
     public Inventory inventory;
-    private PickUpItems currentHeldItem;
+    public PickUpItems currentHeldItem;
 
     private Vector3 targetHoldPosition;
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -59,5 +54,10 @@ public class InteractSystem : MonoBehaviour
                 interactable.Interact(gameObject);
             }
         }
+    }
+
+    public void ClearHeldItem()
+    {
+        currentHeldItem = null;
     }
 }
