@@ -8,7 +8,6 @@ public class InteractSystem : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
 
     [Header("Referencias")]
-    public Inventory inventory;
     public PickUpItems currentHeldItem;
 
     private Vector3 targetHoldPosition;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DeliveryZone : MonoBehaviour
+public class DeliveryZone : MonoBehaviour/*, IInteractable*/
 {
     [Header("References")]
     [SerializeField] private OrderManager orderManager;
@@ -9,7 +9,6 @@ public class DeliveryZone : MonoBehaviour
     {
 
         Debug.Log("Jugador dentro de la zona");
-        // Solo nos interesa el Player
         InteractSystem player = other.GetComponent<InteractSystem>();
 
         if (player == null)
@@ -19,21 +18,33 @@ public class DeliveryZone : MonoBehaviour
         }
             
 
-        // Si no lleva nada en la mano, no hacemos nada
         if (player.currentHeldItem == null)
         {
             Debug.Log("player.currentHeldItem == null");
             return;
         }
 
-        // Si pulsa la tecla de entregar (puedes cambiarla)
         if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("Pulso F en zona");
             TryDeliver(player);
         }
     }
+    //public void Interact(GameObject interactor)
+    //{
+    //    InteractSystem interactor = interactor.GetComponent<InteractSystem>();
+    //    if (interactor.currentHeldItem == null)
+    //    {
+    //        Debug.Log("player.currentHeldItem == null");
+    //        return;
+    //    }
 
+    //    if (Input.GetKeyDown(KeyCode.F))
+    //    {
+    //        Debug.Log("Pulso F en zona");
+    //        TryDeliver(interactor);
+    //    }
+    //}
     private void TryDeliver(InteractSystem player)
     {
         if (orderManager.activeOrders.Count == 0 )
@@ -41,7 +52,6 @@ public class DeliveryZone : MonoBehaviour
         Debug.Log("No da null TryDeliver");
         OrderInstance currentOrder = orderManager.activeOrders[0];
 
-        // Cogemos el objeto físico que está sosteniendo
         GameObject heldObject = player.currentHeldItem.gameObject;
 
         CraftedItem furniture = heldObject.GetComponent<CraftedItem>();
@@ -52,7 +62,6 @@ public class DeliveryZone : MonoBehaviour
             return;
         }
 
-        // Comparación lógica por RecipeData
         if (furniture.recipe == currentOrder.data.recipe)
         {
             Debug.Log("Orden completada correctamente.");
@@ -60,7 +69,7 @@ public class DeliveryZone : MonoBehaviour
             currentOrder.CompleteOrder();
             Destroy(heldObject);
 
-            player.ClearHeldItem(); // limpiamos referencia en el player
+            player.ClearHeldItem(); 
         }
         else
         {
