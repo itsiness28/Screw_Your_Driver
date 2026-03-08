@@ -17,17 +17,6 @@ public class InteractSystem : MonoBehaviour
     {
         if (Input.GetKeyDown(pickUpKey))
         {
-            if (currentHeldItem != null)
-            {
-                if (DeliveryZone.IsPlayerInside())
-                {
-                    DeliveryZone.TryDeliver(this);
-                    return;
-                }
-                currentHeldItem.DropObject();
-                currentHeldItem = null;
-                return;
-            }
             TryInteract();
         }
     }
@@ -36,6 +25,12 @@ public class InteractSystem : MonoBehaviour
     {
         if (currentHeldItem != null)
         {
+            if (DeliveryZone.IsPlayerInside())
+            {
+                if (DeliveryZone.TryDeliver(currentHeldItem))
+                    currentHeldItem = null;
+                return;
+            }
             currentHeldItem.DropObject();
             currentHeldItem = null;
             return;
@@ -59,10 +54,5 @@ public class InteractSystem : MonoBehaviour
                 interactable.Interact(gameObject);
             }
         }
-    }
-
-    public void ClearHeldItem()
-    {
-        currentHeldItem = null;
     }
 }

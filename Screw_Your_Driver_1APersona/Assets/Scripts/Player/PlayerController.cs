@@ -18,15 +18,19 @@ public class PlayerController : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
     private float xRotation = 0f;
+    private bool controlEnabled;
 
     void Start()
     {
+        controlEnabled = true;
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
     {
+        if (!controlEnabled) return;
+
         Movimiento();
         RotacionCamara();
     }
@@ -66,6 +70,15 @@ public class PlayerController : MonoBehaviour
 
         // Rotación horizontal (jugador)
         transform.Rotate(Vector3.up * mouseX);
+    }
+    public void SetControl(bool enabled)
+    {
+        controlEnabled = enabled;
+
+        if (!enabled)
+            Cursor.lockState = CursorLockMode.None;
+        else
+            Cursor.lockState = CursorLockMode.Locked;
     }
 }
 
