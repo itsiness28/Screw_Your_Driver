@@ -9,6 +9,7 @@ public class InteractSystem : MonoBehaviour
 
     [Header("Referencias")]
     public PickUpItems currentHeldItem;
+    public DeliveryZone DeliveryZone;
 
     private Vector3 targetHoldPosition;
 
@@ -18,6 +19,11 @@ public class InteractSystem : MonoBehaviour
         {
             if (currentHeldItem != null)
             {
+                if (DeliveryZone.IsPlayerInside())
+                {
+                    DeliveryZone.TryDeliver(this);
+                    return;
+                }
                 currentHeldItem.DropObject();
                 currentHeldItem = null;
                 return;

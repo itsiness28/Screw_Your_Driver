@@ -1,51 +1,38 @@
 using UnityEngine;
 
-public class DeliveryZone : MonoBehaviour/*, IInteractable*/
+public class DeliveryZone : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private OrderManager orderManager;
+    private InteractSystem interactSystem;
+    private bool playerInside;
 
-    private void OnTriggerStay(Collider other)
+    public void Start()
     {
-
-        Debug.Log("Jugador dentro de la zona");
-        InteractSystem player = other.GetComponent<InteractSystem>();
-
-        if (player == null)
+        playerInside = false;
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponent<InteractSystem>() != null)
         {
-            Debug.Log("player == null");
-            return;
-        }
-            
-
-        if (player.currentHeldItem == null)
-        {
-            Debug.Log("player.currentHeldItem == null");
-            return;
-        }
-
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("Pulso F en zona");
-            TryDeliver(player);
+            playerInside = true;
+            if(interactSystem == null)
+                interactSystem = other.GetComponent<InteractSystem>();
         }
     }
-    //public void Interact(GameObject interactor)
-    //{
-    //    InteractSystem interactor = interactor.GetComponent<InteractSystem>();
-    //    if (interactor.currentHeldItem == null)
-    //    {
-    //        Debug.Log("player.currentHeldItem == null");
-    //        return;
-    //    }
 
-    //    if (Input.GetKeyDown(KeyCode.F))
-    //    {
-    //        Debug.Log("Pulso F en zona");
-    //        TryDeliver(interactor);
-    //    }
-    //}
-    private void TryDeliver(InteractSystem player)
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.GetComponent<InteractSystem>() != null)
+            playerInside = false;
+    }
+
+    public bool IsPlayerInside()
+    {
+        return playerInside;
+    }
+    
+    public void TryDeliver(InteractSystem player)
     {
         if (orderManager.activeOrders.Count == 0 )
             return;
