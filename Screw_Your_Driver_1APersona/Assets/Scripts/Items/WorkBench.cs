@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WorkBench : MonoBehaviour, IInteractable
 {
@@ -6,6 +7,7 @@ public class WorkBench : MonoBehaviour, IInteractable
     [SerializeField] private Camera taskCamera;
     [SerializeField] private PlayerController playerController;
     [SerializeField] private GameObject hotVar;
+
     void Start()
     {
         
@@ -32,8 +34,10 @@ public class WorkBench : MonoBehaviour, IInteractable
     void StartMinigame(GameObject player)
     {
         fpsCamera.gameObject.SetActive(false);
-        taskCamera.gameObject.SetActive(true);
         playerController.SetControl(false);
         hotVar.SetActive(false);
+        MinigameSession.screwMinigameCompleted = false;
+        MinigameSession.returnSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene("ScrewMinigame");
     }
 }
