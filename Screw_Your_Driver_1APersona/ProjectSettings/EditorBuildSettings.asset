@@ -20,8 +20,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Customizable_Screen.unity
     guid: 3fbcf064647d78747b91d48eb8573614
-  - enabled: 1
-    path: Assets/Scenes/ScrewMinigame.unity
-    guid: ba17698d8188e5e4d9ae1236bcf63c35
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
