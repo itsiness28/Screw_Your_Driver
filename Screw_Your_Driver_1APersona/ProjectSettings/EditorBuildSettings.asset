@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Customizable_Screen.unity
     guid: 3fbcf064647d78747b91d48eb8573614
+  - enabled: 1
+    path: Assets/Scenes/Montaje escenarios.unity
+    guid: e39a1ed254d9974488e0d11e63ccbdba
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

@@ -6,40 +6,32 @@ using System.Collections;
 
 public class MainMenu_Manager : MonoBehaviour
 {
-    [SerializeField] public Button startGame;
-    [SerializeField] public Button optionsMenu;
-    [SerializeField] public Button exitGame;
-    public static SceneManager instance;
-    [SerializeField] Animator RawImage;
+    
+   
 
+     [SerializeField] bool pasar_nivel;
+     [SerializeField] int indice_nivel;
 
-    //public void Start()
-    //{
-    //    RawImage.SetTrigger("Start");
-    //}
-
-    public void NewGame()
+     void Update()
     {
-        SceneManager.LoadScene("Main_Game");
-        //RawImage.SetTrigger("End");
+        if (pasar_nivel)
+        {
+            CambiarNivel(indice_nivel);
+        }
+
     }
 
-    public void OptionsMenu()
+    public void CambiarNivel(int indice)
     {
-        SceneManager.LoadScene("Options_Menu");
+        SceneManager.LoadScene(indice);
     }
 
+  
     public void ExitGame()
     {
         Application.Quit();
     }
 
-    //IEnumerator LoadGame()
-    //{
 
-
-      //  yield return new WaitForSeconds(1);
-        //SceneManager.LoadScene("Main_Game");
-        //RawImage.SetTrigger("Start");
     //}
 }
