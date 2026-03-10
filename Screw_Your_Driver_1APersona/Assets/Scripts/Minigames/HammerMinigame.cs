@@ -225,9 +225,44 @@ public class HammerMinigame : MonoBehaviour
             golpesActuales[index]++;
 
             if (golpesActuales[index] >= golpesNecesarios)
+            {
+                CambiarColorSlot(index);
                 CheckCompletion();
+            }
         });
 
         trigger.triggers.Add(click);
     }
+    void CambiarColorSlot(int index)
+    {
+        // 1. Intentar en el mismo objeto
+        var raw = slots[index].GetComponent<UnityEngine.UI.RawImage>();
+        if (raw != null)
+        {
+            raw.color = Color.green;
+            return;
+        }
+
+        // 2. Intentar en hijos
+        raw = slots[index].GetComponentInChildren<UnityEngine.UI.RawImage>();
+        if (raw != null)
+        {
+            raw.color = Color.green;
+            return;
+        }
+
+        // 3. Intentar con Image por si acaso
+        var img = slots[index].GetComponentInChildren<UnityEngine.UI.Image>();
+        if (img != null)
+        {
+            img.color = Color.green;
+            return;
+        }
+
+        Debug.LogWarning("No se encontró RawImage ni Image en el slot " + index);
+    }
+
+
+
+
 }
