@@ -10,7 +10,6 @@ public class Inventory : MonoBehaviour
     [Header("Referencia al jugador")]
     public Transform playerTransform;
 
-
     [Header("Slot 1 (Herramientas)")]
     public ItemType toolSlot = ItemType.None;   // ToolA o ToolB
     public int toolAmount = 0;                  // Siempre 1
@@ -19,16 +18,17 @@ public class Inventory : MonoBehaviour
     public int nailsAmount = 0;                 // 0–8
     public int maxNails = 8;
 
+    [Header("Herramienta equipada")]
+    public ItemType equippedTool = ItemType.None;
+
     public delegate void OnInventoryChanged();
     public event OnInventoryChanged inventoryChanged;
 
     // Añadir objeto al inventario
     public bool AddItem(Item item)
     {
-        
-
         // -------------------------------
-        // 2) HERRAMIENTAS → Slot 1
+        // HERRAMIENTAS → Slot 1
         // -------------------------------
         if (item.type == ItemType.ToolA || item.type == ItemType.ToolB)
         {
@@ -42,10 +42,12 @@ public class Inventory : MonoBehaviour
             toolSlot = item.type;
             toolAmount = 1;
 
+            // Equipar automáticamente la herramienta recogida
+            equippedTool = item.type;
+
             Destroy(item.gameObject);
             inventoryChanged?.Invoke();
-            Console.WriteLine("Herramienta cogida");
-            Debug.Log("cogido");
+            Debug.Log("Herramienta cogida");
             return true;
         }
 
@@ -88,17 +90,27 @@ public class Inventory : MonoBehaviour
         toolSlot = ItemType.None;
         toolAmount = 0;
 
+        // Desequipar
+        equippedTool = ItemType.None;
+
         inventoryChanged?.Invoke();
     }
 
     public bool AddNails(int amount)
     {
         nailsAmount += amount;
-        if (nailsAmount > 8) 
-            nailsAmount = 8;
+        if (nailsAmount > maxNails)
+            nailsAmount = maxNails;
+
         inventoryChanged?.Invoke();
         return true;
     }
 
-
+    // ---------------------------------------------------------
+    // MÉTODO NECESARIO PARA EL MINIJUEGO
+    // ---------------------------------------------------------
+    public bool HasTool(ItemType tool)
+    {
+        return equippedTool == tool;
+    }
 }

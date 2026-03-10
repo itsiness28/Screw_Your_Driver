@@ -40,6 +40,8 @@ public class InteractSystem : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactUpRange, interactableLayer))
         {
+            Debug.Log("Golpeando: " + hit.collider.name);
+
             IInteractable interactable = hit.collider.GetComponent<IInteractable>();
 
             if (interactable != null)
