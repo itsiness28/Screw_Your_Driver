@@ -17,11 +17,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Selector.unity
     guid: 60a3e98bd90fc054e90bd8b7703405dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Customizable_Screen.unity
     guid: 3fbcf064647d78747b91d48eb8573614
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Montaje escenarios.unity
     guid: e39a1ed254d9974488e0d11e63ccbdba
+  - enabled: 1
+    path: Assets/Scenes/ScrewMinigame.unity
+    guid: ba17698d8188e5e4d9ae1236bcf63c35
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
