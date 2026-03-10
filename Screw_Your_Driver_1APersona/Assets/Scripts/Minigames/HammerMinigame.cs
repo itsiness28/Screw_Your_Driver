@@ -1,4 +1,4 @@
-using System.Collections;
+Ôªøusing System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -21,14 +21,22 @@ public class HammerMinigame : MonoBehaviour
     private bool[] clavoColocado;
     private int[] golpesActuales;
 
-    // Scripts que se desactivar·n temporalmente
+    // Scripts que se desactivar√°n temporalmente
     private MonoBehaviour[] cameraScripts;
     private MonoBehaviour[] playerScripts;
+
+    private int[] slotOcupadoPorClavo;
+
 
     void Start()
     {
         clavoColocado = new bool[clavos.Length];
         golpesActuales = new int[clavos.Length];
+
+        slotOcupadoPorClavo = new int[clavos.Length];
+        for (int i = 0; i < slotOcupadoPorClavo.Length; i++)
+            slotOcupadoPorClavo[i] = -1; // -1 = no colocado
+
 
         for (int i = 0; i < clavos.Length; i++)
         {
@@ -54,7 +62,7 @@ public class HammerMinigame : MonoBehaviour
         minigameUI.SetActive(true);
 
         // ---------------------------------------------------------
-        // BLOQUEAR C¡MARA
+        // BLOQUEAR C√ÅMARA
         // ---------------------------------------------------------
         cameraScripts = Camera.main.GetComponents<MonoBehaviour>();
         foreach (var script in cameraScripts)
@@ -94,7 +102,7 @@ public class HammerMinigame : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
-        // Reactivar scripts de c·mara
+        // Reactivar scripts de c√°mara
         if (cameraScripts != null)
         {
             foreach (var script in cameraScripts)
@@ -125,16 +133,19 @@ public class HammerMinigame : MonoBehaviour
         {
             float distancia = Vector2.Distance(clavo.anchoredPosition, slots[i].anchoredPosition);
 
-            if (distancia < 40f)
+            if (distancia < 60f)
             {
                 clavo.anchoredPosition = slots[i].anchoredPosition;
                 clavoColocado[index] = true;
+                slotOcupadoPorClavo[index] = i; // ‚Üê GUARDAMOS EL SLOT REAL
                 return;
             }
         }
 
         clavoColocado[index] = false;
+        slotOcupadoPorClavo[index] = -1;
     }
+
 
     // ---------------------------------------------------------
     // COMPROBAR COMPLETADO
@@ -149,7 +160,7 @@ public class HammerMinigame : MonoBehaviour
 
         completadoUI.SetActive(true);
 
-        // Cerrar minijuego despuÈs de 2 segundos
+        // Cerrar minijuego despu√©s de 2 segundos
         StartCoroutine(CloseAfterDelay(1f));
     }
 
@@ -235,32 +246,33 @@ public class HammerMinigame : MonoBehaviour
     }
     void CambiarColorSlot(int index)
     {
-        // 1. Intentar en el mismo objeto
-        var raw = slots[index].GetComponent<UnityEngine.UI.RawImage>();
+        int slotReal = slotOcupadoPorClavo[index];
+
+        if (slotReal == -1)
+        {
+            Debug.LogWarning("El clavo " + index + " no est√° colocado en ning√∫n slot.");
+            return;
+        }
+
+        // Intentar RawImage
+        var raw = slots[slotReal].GetComponentInChildren<UnityEngine.UI.RawImage>();
         if (raw != null)
         {
             raw.color = Color.green;
             return;
         }
 
-        // 2. Intentar en hijos
-        raw = slots[index].GetComponentInChildren<UnityEngine.UI.RawImage>();
-        if (raw != null)
-        {
-            raw.color = Color.green;
-            return;
-        }
-
-        // 3. Intentar con Image por si acaso
-        var img = slots[index].GetComponentInChildren<UnityEngine.UI.Image>();
+        // Intentar Image
+        var img = slots[slotReal].GetComponentInChildren<UnityEngine.UI.Image>();
         if (img != null)
         {
             img.color = Color.green;
             return;
         }
 
-        Debug.LogWarning("No se encontrÛ RawImage ni Image en el slot " + index);
+        Debug.LogWarning("El slot " + slotReal + " no tiene RawImage ni Image.");
     }
+
 
 
 
