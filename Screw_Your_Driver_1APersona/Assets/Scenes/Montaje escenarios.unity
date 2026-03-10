@@ -1291,6 +1291,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 162379397}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &166249771
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0045872
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -22.26903
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 24464eca96712554daca9f0cf77976ae,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Taladro (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 24464eca96712554daca9f0cf77976ae, type: 3}
 --- !u!1001 &166657908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,6 +1951,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 229523608}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &236586644
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.830057
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15000007
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.713085
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 81c0e856416951045a2ca9a80ed2b028,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Destornillador
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81c0e856416951045a2ca9a80ed2b028, type: 3}
 --- !u!1001 &239429837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1957,6 +2093,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 239429837}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &241874810
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 22.481934
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.918182
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 772fd8d3d1f33ca43a226d2acccac6ce,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CajasMartilloFilled
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 772fd8d3d1f33ca43a226d2acccac6ce, type: 3}
 --- !u!1001 &242960531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3333,6 +3537,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 500674430}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &508227710
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.285694
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -19.940071
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2a3e86f879b851545a4753af45263ec0,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_MesaCrafting (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2a3e86f879b851545a4753af45263ec0, type: 3}
 --- !u!1001 &511229679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4739,6 +5011,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 658306035}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &660992436
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.77
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2700004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.26
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: acde5515cde6a384c907f70b5a3fcaa8,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CajaAbierta
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: acde5515cde6a384c907f70b5a3fcaa8, type: 3}
 --- !u!1001 &679440210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5405,6 +5745,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 752970784}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &759275022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 26.095428
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.892805
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b8d3d63df6324649bef8d29fc973862,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CajasScrewFilled
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3b8d3d63df6324649bef8d29fc973862, type: 3}
 --- !u!1001 &765634061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6225,6 +6633,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 859704082}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &861068668
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.417344
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.664036
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: eb135c53381c8a24caa0ccdc2ef076ff,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CarritoH (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb135c53381c8a24caa0ccdc2ef076ff, type: 3}
 --- !u!1001 &865051298
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7477,6 +7953,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1038623548}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1039520027
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.7134323
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.641253
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bd09b9ab14d686b40aa035b6c3f41c80,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Silla2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd09b9ab14d686b40aa035b6c3f41c80, type: 3}
 --- !u!1001 &1042241648
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8252,6 +8796,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1105975953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1110102315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.381257
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.049999975
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -25.191616
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 45d6e00e86944f540bc7fb22d52d88ae,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_LlaveInglesa (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45d6e00e86944f540bc7fb22d52d88ae, type: 3}
 --- !u!1001 &1115984416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8969,6 +9581,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1186262498}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1201327657
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.3416405
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.86953
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bc9552497dbd24648b6e406ad1e2c2ae,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Clavo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bc9552497dbd24648b6e406ad1e2c2ae, type: 3}
 --- !u!1001 &1206560184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10565,6 +11245,74 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c1aa5c21c1c1b3489a6f8a3d21d2a6c, type: 3}
+--- !u!1001 &1371844353
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.4664946
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15000004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.379871
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a957f3afd43c25b439afdb0acab2771e,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Martillo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a957f3afd43c25b439afdb0acab2771e, type: 3}
 --- !u!1001 &1376935253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10713,6 +11461,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1381492824}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1390569834
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.0593529
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000009536743
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -21.22256
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e1ac5e31cea2fa345bcfaa3fb43d8606,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Tornillo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e1ac5e31cea2fa345bcfaa3fb43d8606, type: 3}
 --- !u!1001 &1394666226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12246,6 +13062,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1595856265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1596095433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.8911552
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -16.91345
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Silla1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1676c3c2b43a4ba4d898bbd2ceb952c9, type: 3}
 --- !u!1001 &1603267493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14534,6 +15418,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1894580953}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1904784433
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 19.059132
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.826221
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 506100e6a87711d48a24ebaaaabb56dc,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CajaScrew
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 506100e6a87711d48a24ebaaaabb56dc, type: 3}
 --- !u!1 &1915457527
 GameObject:
   m_ObjectHideFlags: 0
@@ -14951,6 +15903,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1941188907}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1945254132
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.513612
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -26.208462
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 96dfe5a88541deb4180b107c3e722de7,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_CajaMartillo
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96dfe5a88541deb4180b107c3e722de7, type: 3}
 --- !u!1001 &1948915165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15469,6 +16489,74 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2032134421}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2039836010
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.95
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000030908623
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3f34bb9a7b0ff8847a2b55c164a25638,
+        type: 3}
+      propertyPath: m_Name
+      value: IKEA_Armario_Unicornio
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3f34bb9a7b0ff8847a2b55c164a25638, type: 3}
 --- !u!1001 &2046153612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16256,3 +17344,19 @@ SceneRoots:
   - {fileID: 1319546089}
   - {fileID: 2104206050}
   - {fileID: 1233981442}
+  - {fileID: 2039836010}
+  - {fileID: 660992436}
+  - {fileID: 861068668}
+  - {fileID: 1201327657}
+  - {fileID: 236586644}
+  - {fileID: 1110102315}
+  - {fileID: 1371844353}
+  - {fileID: 508227710}
+  - {fileID: 1596095433}
+  - {fileID: 1039520027}
+  - {fileID: 166249771}
+  - {fileID: 1390569834}
+  - {fileID: 1945254132}
+  - {fileID: 1904784433}
+  - {fileID: 241874810}
+  - {fileID: 759275022}
